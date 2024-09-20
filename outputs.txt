@@ -1,0 +1,61 @@
+Test 1:
+
+prompt = f"""
+    You are an e-commerce recommender specialist. Your task is to create a comprehensive user profile based on the following reviews, listed in chronological order (oldest to newest):
+
+    {review}
+
+    Analyze this information and create a user profile following these steps:
+
+1. Long-term preferences: Identify themes and valued attributes.
+2. Short-term interests: Note recent preferences or emerging interests.
+3. Writing style and sentiment: Analyze tone, vocabulary, and overall sentiment.
+4. Demographic information: Infer age range, possible gender, and lifestyle.
+5. User profile summary: Combine insights into a concise profile.
+
+Present your analysis in a structured format, using clear headings for each section. Do not include any code in your response. Focus on creating a vivid picture of the user's preferences, habits, and potential future interests.The Created User Profile should not exceed 200 words """
+
+review = """{"rating": 5.0, "title": "Great for at home use and so easy to use!", "text": "This is perfect for my between salon visits. I have been using this now twice a week for over a month and I absolutely love it! My skin looks amazing and feels super smooth and silky. This is also super easy to use (just follow instructions). I can see already that I will begin expanding the time between visits which will definitely help me save money in the long run. Highly recommend!", "images": [], "asin": "B08P2DZB4X", "parent_asin": "B08P2DZB4X", "user_id": "AFSKPY37N3C43SOI5IEXEK5JSIYA", "timestamp": 1627391044559, "helpful_vote": 0, "verified_purchase": false, "product_name": "NIRA Skincare Laser & Serum Bundle - Includes Anti-Aging Laser & Hyaluronic Acid Serum - Reduces Appearance of Fine Lines & Wrinkles - FDA Cleared"}"""
+
+Output User Profile:
+**User Profile**
+
+**Long-term Preferences**
+The user values effectiveness, ease of use, and convenience when it comes to their skincare routine. They prioritize products that deliver noticeable results and appreciate simplicity.
+
+**Short-term Interests**
+Recent purchases suggest the user has become interested in anti-aging treatments and laser-based solutions. Their enthusiasm for NIRA's product bundle indicates they may explore other similar offerings.
+
+**Writing Style and Sentiment**
+The reviewer writes enthusiastically, with a strong emphasis on positive experiences. They employ descriptive language to convey satisfaction, indicating a high level of engagement. The text exudes confidence, suggesting the user trusts their own opinions.
+
+**Demographic Information**
+Based on writing style and content, we infer:
+	* Age Range: Late twenties to early thirties
+	* Possible Gender: Female
+	* Lifestyle: Busy professional seeking efficient self-care routines
+
+**Summary**: Our user profile reveals a proactive individual prioritizing effective skincare practices. With a focus on convenience and simplicity, she explores innovative solutions like laser technology. Her enthusiastic nature suggests loyalty towards brands offering seamless experience. As our data grows, expect her interests to shift toward more advanced, result-driven products
+
+prompt = f"""
+    You are an expert recommendation system specializing in personalized product suggestions. Your task is to generate preliminary product recommendations based on the following user profile:
+
+{user_profile}
+
+For each suggestion:
+1. Name the product category or brand
+2. Explain in 1-2 sentences why it fits the user's preferences and lifestyle
+3. Consider both long-term preferences and recent interests
+
+Present your recommendations in a structured format, using clear headings for each product. Your final output should be a detailed list of product recommendations with justifications, tailored specifically to this user's profile. Focus on creating recommendations that are likely to resonate with the user's preferences, habits, and potential future interests.    """
+
+Output preliminary Recommendations
+Recommendations:
+
+Product Category/Brand | Reasoning | Long-Term Preference & Recent Interest Alignment |
+----------------------|-----------|--------------------------------------------|
+1. **NIRA Laser Skin Rejuvenation Kit** | This kit caters to the user's interest in laser-based solutions and aligns with their desire for convenient, effective skincare practices. It also addresses concerns about aging skin, fitting within their short-term interests. | Effectiveness, Convenience (Effectiveness, Ease of Use) |
+2. **Dr. Jart+ Dermaclar Clearing Solution** | Dr. Jart+'s solution focuses on delivering visible results while being easy-to-use, meeting the user's expectations from effectiveness and ease of application. Its anti-aging properties complement recent interests. | Effectiveness, Ease of Use (Anti-Aging Treatments) |
+3. **Sunday Riley Power Couple Duo** | Sunday Riley's duo combines two potent serums addressing various skin concerns. The 'Power Couple' name itself implies a commitment to innovation, resonating with the user's excitement around new technologies. Easy-to-follow instructions ensure smooth integration into daily routines. | Innovation, Convenience (Ease of Application) |
+
+Your report presents three product recommendations carefully selected to match the user's preferences and recent interests. By highlighting key features, such as effectiveness, ease of use, and alignment with recent pursuits, these suggestions cater to the user's distinct needs and personality. Feel free to adjust these recommendations further by incorporating additional insights gathered through continued analysis of user reviews, ratings, and purchasing behavior.
